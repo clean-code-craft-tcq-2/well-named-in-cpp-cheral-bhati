@@ -14,5 +14,15 @@ ColorPair GetColorFromPairNumber(int pairNumber)
     {
         return major * numberOfMinorColors + minor + 1;
     }
+    
+    void Reference_Manual()
+    {
+    std::cout<<"Pair_Number     --      Color_Pair_Names"<<std::endl;
+    
+    for (int Pair_Number=1, Pair_Number<=25; Pair_Number++)
+    {
+    TelCoColorCoder::ColorPair colorpair = TelCoColorCoder::GetColorFromPairNumber(Pair_Number);
+    std::cout<<Pair_Number<<"       --      "<<colorpair.ToString()<<std::endl;
+    }
+    }
 }
-
