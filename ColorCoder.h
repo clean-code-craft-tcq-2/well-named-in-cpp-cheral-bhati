@@ -14,4 +14,4 @@ ColorPair GetColorFromPairNumber(int pairNumber)
         return major * numberOfMinorColors + minor + 1;
     }
 }
-4
+
