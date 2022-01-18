@@ -1,24 +1,7 @@
 #include <iostream>
 #include "ColorCoder.h"
 #include "TestColorCoder.h"
-
-namespace TelCoColorCoder
-{  
-ColorPair GetColorFromPairNumber(int pairNumber)
-    {
-        int zeroBasedPairNumber = pairNumber - 1;
-        MajorColor majorColor = 
-            (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
-        MinorColor minorColor =
-            (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
-        return ColorPair(majorColor, minorColor);
-    }
-    int GetPairNumberFromColor(MajorColor major, MinorColor minor)
-    {
-        return major * numberOfMinorColors + minor + 1;
-    }
-}
-
+#include "main.h"
 
 int main() {
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
